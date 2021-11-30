@@ -1,38 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  padding: 20px;
+  font-family: "JetBrains Mono", monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .code-editor {
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App .code-editor .code-fl {
+  flex: 1 1;
+}
+.App .code-editor .code-js {
+  flex: 1 1;
+}
+
+.App .btnTransfCode {
+  display: flex;
+  height: 100%;
+  font-size: 40px;
+  color: lightseagreen;
+  margin: 0 20px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: transparent;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.App .btnTransfCode i {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .btnTransfCode i:hover {
+  cursor: pointer;
 }
