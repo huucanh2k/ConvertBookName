@@ -12,7 +12,7 @@ const CodeFormalLanguage = ({ onChangeCode, code }) => {
       <CodeEditor
         value={code}
         language="js"
-        placeholder="Vui lòng nhập dữ liệu đặc tả hình thức"
+        placeholder="Vui lòng nhập"
         onChange={onChange}
         padding={15}
         style={{

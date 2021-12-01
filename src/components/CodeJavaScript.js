@@ -25,7 +25,7 @@ const CodeJavaScript = ({ codejs }) => {
       <CodeEditor
         value={codejs}
         language="js"
-        placeholder="Chờ nhập dữ liệu đặc tả hình thức và bấm vào nút chuyển đổi"
+        placeholder="Chưa có code chuyển đổi"
         padding={15}
         readOnly={true}
         style={{
