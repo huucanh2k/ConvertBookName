@@ -4,6 +4,15 @@ import CodeEditor from "@uiw/react-textarea-code-editor"
 
 const CodeJavaScript = ({ codejs }) => {
   // const [code, setCode] = React.useState(codejs)
+
+  const runCode = (e) => {
+    try {
+      eval(codejs)
+    } catch (e) {
+      throw new Error()
+    }
+  }
+
   return (
     <div className={styles.codeContainer}>
       {/* <textarea
@@ -27,6 +36,9 @@ const CodeJavaScript = ({ codejs }) => {
           minHeight: "50%",
         }}
       />
+      <button className={styles.btnRunCode} onClick={runCode}>
+        Chạy code
+      </button>
     </div>
   )
 }

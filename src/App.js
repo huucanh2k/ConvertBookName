@@ -303,8 +303,30 @@ function App() {
     setCodeJS(strResult)
   }
 
+  const onChangeFile = async (e) => {
+    e.preventDefault()
+    const reader = new FileReader()
+    reader.onload = async (e) => {
+      const text = e.target.result
+      setCodeFL(text)
+    }
+    reader.readAsText(e.target.files[0])
+  }
+
   return (
     <div className="App">
+      <header className="header">
+        <label htmlFor="fileImport" className="fileImport">
+          Chọn file định dạng *.txt
+        </label>
+        <input
+          type="file"
+          onChange={onChangeFile}
+          name="fileImport"
+          id="fileImport"
+          hidden
+        />
+      </header>
       <div className="code-editor">
         <div className="code-fl">
           <CodeFormalLanguage onChangeCode={onChangeCode} code={codeFL} />

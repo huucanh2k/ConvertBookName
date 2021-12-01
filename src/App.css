@@ -46,3 +46,14 @@
 .App .btnTransfCode i:hover {
   cursor: pointer;
 }
+
+.App .header {
+  height: 40px;
+}
+
+.App .fileImport {
+  padding: 10px;
+  background-color: #00d2d3;
+  border-radius: 5px;
+  color: #fff;
+}

@@ -9,14 +9,6 @@ const CodeFormalLanguage = ({ onChangeCode, code }) => {
 
   return (
     <div className={styles.codeEditorWrapper}>
-      {/* <textarea
-        name="code-formal-language"
-        cols="30"
-        rows="10"
-        className={styles.codeEditor}
-        value={code}
-        onChange={onChange}
-      ></textarea> */}
       <CodeEditor
         value={code}
         language="js"
