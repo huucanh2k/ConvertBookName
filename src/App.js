@@ -56,6 +56,8 @@ function App() {
 
   const handlePost = (strPost) => {
     let result = ""
+    strPost = strPost.replace(/TRUE/g, "true")
+    strPost = strPost.replace(/FALSE/g, "false")
     let idxSlash = strPost.indexOf("||")
     if (idxSlash >= 0) {
       let arrPost = strPost.split("||")
