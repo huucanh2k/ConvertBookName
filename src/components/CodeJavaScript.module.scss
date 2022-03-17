@@ -12,11 +12,15 @@
 }
 
 .btnRunCode {
-  padding: 15px;
+  padding: 20px 60px;
   border: none;
   border-radius: 5px;
   background-color: #1dd1a1;
   margin-top: 10px;
   font-weight: 600;
   color: #fff;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.96);
+  }
 }

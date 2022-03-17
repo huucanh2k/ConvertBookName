@@ -13,19 +13,26 @@ const CodeJavaScript = ({ codejs }) => {
     }
   }
 
+  const onCopyClick = () => {
+    if (!navigator.clipboard) {
+      return
+    }
+    navigator.clipboard.writeText(codejs).then(
+      function () {
+        console.log("Async: Copying to clipboard was successful!")
+      },
+      function (err) {
+        console.error("Async: Could not copy text: ", err)
+      }
+    )
+  }
+
   return (
     <div className={styles.codeContainer}>
-      {/* <textarea
-        name="code-javacript"
-        cols="30"
-        rows="10"
-        className={styles.codeEditor}
-        value={codejs}
-      ></textarea> */}
       <CodeEditor
         value={codejs}
         language="js"
-        placeholder="Chưa có code chuyển đổi"
+        placeholder="Đợi"
         padding={15}
         readOnly={true}
         style={{
@@ -33,11 +40,11 @@ const CodeJavaScript = ({ codejs }) => {
           backgroundColor: "#f5f5f5",
           fontFamily:
             "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
-          minHeight: "50%",
+          minHeight: "70%",
         }}
       />
-      <button className={styles.btnRunCode} onClick={runCode}>
-        Chạy code
+      <button className={styles.btnRunCode} onClick={onCopyClick}>
+        Copy
       </button>
     </div>
   )

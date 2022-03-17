@@ -20,7 +20,8 @@ const CodeFormalLanguage = ({ onChangeCode, code }) => {
           backgroundColor: "#f5f5f5",
           fontFamily:
             "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
-          minHeight: "50%",
+          minHeight: "70%",
+          marginRight: "40px",
         }}
       />
     </div>
